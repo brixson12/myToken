@@ -1,42 +1,23 @@
-# myToken
-// SPDX-License-Identifier: MIT
-pragma solidity 0.8.18;
+Project Title: Simple Token Smart Contract
 
-/*
-       REQUIREMENTS
-    1. Your contract will have public variables that store the details about your coin (Token Name, Token Abbrv., Total Supply)
-    2. Your contract will have a mapping of addresses to balances (address => uint)
-    3. You will have a mint function that takes two parameters: an address and a value. 
-       The function then increases the total supply by that number and increases the balance 
-       of the “sender” address by that amount
-    4. Your contract will have a burn function, which works the opposite of the mint function, as it will destroy tokens. 
-       It will take an address and value just like the mint functions. It will then deduct the value from the total supply 
-       and from the balance of the “sender”.
-    5. Lastly, your burn function should have conditionals to make sure the balance of "sender" is greater than or equal 
-       to the amount that is supposed to be burned.
-*/
+Description:
+This Solidity smart contract, named "Mytoken," represents a basic token on the Ethereum blockchain. It includes functions to create (mint) and destroy (burn) tokens. Here's a more detailed overview:
 
-contract Mytoken {
+Getting Started:
 
-    // public variables here
-    string public tokenName = "Brix";
-    string public tokenAbbrv = "BRX";
-    uint public totalSupply = 0;
+Installing: No installation is required; this is a smart contract written in Solidity for Ethereum use google remix to deploy.
+How/where to download your program: You can deploy this contract on the Ethereum blockchain.
+Modifications: No specific modifications are needed for this contract; it's ready to be deployed as is.
+Executing Program:
 
-    // mapping variable here
-    mapping (address => uint) public balances;
+To use this smart contract, you would need to deploy it on the Ethereum blockchain. Once deployed, you can interact with it using Ethereum wallets or other smart contracts.
+Below are the steps for deploying and interacting with it:
+Deploy the contract on the Ethereum blockchain using a development environment like Remix or Truffle.
+After deployment, you can call the "mint" function to create new tokens, specifying the recipient's address and the number of tokens to create.
+You can also use the "burn" function to destroy tokens held by a specific address, provided they have enough tokens to burn.
+Help:
 
-    // mint function
-    function mint (address _address, uint _value) public {
-        totalSupply += _value;
-        balances[_address] += _value;
-    }
+Common issues or problems are not expected for this basic token contract. However, remember that this is a simplified example and may need additional features and security measures for production use.
+Authors:
 
-    // burn function
-     function burn (address _address, uint _value) public {
-        if (balances[_address] >= _value) {
-            totalSupply -= _value;
-            balances[_address] -= _value;
-        }
-     }
-} 
+Brixson G. Medina/NTC

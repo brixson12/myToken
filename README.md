@@ -45,6 +45,6 @@ This project is open-source and provided under the MIT License. See the [LICENSE
 
 ## Author
 
-- [Your Name]
+- BRIXSON
 
 Feel free to modify and enhance this README as needed for your project. Replace `[Your Name]` with your actual name or the author's name.
